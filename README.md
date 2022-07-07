@@ -12,7 +12,7 @@ A bit of Terraform to create a support AWS EC2 instance in your VPC with a **pub
 
 ## Customizations
 
-* If you have network access to whichever AWS network you're building this in, you could just chose a private subnet.
+* If you have network access to whichever AWS network you're building this in, you could just choose a private subnet.
 
 * If you *really* want ssh access from anywhere, you could tell it your address is 0.0.0.0 - but, the network prefix is purposely hardcoded to /32.  You'd need to change that too.
 

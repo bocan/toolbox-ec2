@@ -2,8 +2,8 @@
 # A security group to allow ssh (or other) access.
 resource "aws_security_group" "ingress-ssh" {
   #checkov:skip=CKV2_AWS_5:False positive. This is attached via a module and checkov can't detect it.
-  name   = "${local.name}-allow-ssh-sg"
-  vpc_id = data.aws_vpc.selected.id
+  name        = "${local.name}-allow-ssh-sg"
+  vpc_id      = data.aws_vpc.selected.id
   description = "Allow ssh"
   ingress {
     description = "Allow inbound traffic to SSH from anywhere"
