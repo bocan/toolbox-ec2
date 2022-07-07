@@ -12,15 +12,15 @@ on:
     branches: [ "main" ]  
   schedule:
     - cron: '21 21 * * 1'
-
 jobs:
   tfsec:
-    name: tfsec
+    name: tfsec PR commenter
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Terraform security scan
-        uses: triat/terraform-security-scan@v3.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Clone repo
+        uses: actions/checkout@master
+      - name: tfsec
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+        with:
+          github_token: ${{ github.token }}
