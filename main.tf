@@ -19,6 +19,7 @@ resource "aws_security_group" "ingress-ssh" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
+    #tfsec:ignore:aws-vpc-no-public-egress-sgr
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
@@ -89,6 +90,13 @@ module "ec2_instance" {
   iam_instance_profile        = aws_iam_instance_profile.ssm_inst_profile.name
 
   user_data_base64 = base64encode(local.user_data)
+
+  metadata_options = {
+    http_endpoint               = "enabled"
+    http_tokens                 = "required"
+    http_put_response_hop_limit = 8
+    instance_metadata_tags      = "enabled"
+  }
 
   enable_volume_tags = true
   root_block_device = [
