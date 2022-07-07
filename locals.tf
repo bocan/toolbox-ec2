@@ -1,7 +1,7 @@
 
 locals {
 
-  name = "chrisfu-support"
+  name    = "chrisfu-support"
   your_ip = "31.121.189.242"
 
   vpc           = "vpc-041eae251015f69cc"
