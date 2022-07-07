@@ -1,3 +1,4 @@
+[![tfsec](https://github.com/bocan/toolbox-ec2/actions/workflows/tfsec.yml/badge.svg)](https://github.com/bocan/toolbox-ec2/actions/workflows/tfsec.yml)
 # toolbox-ec2
 A bit of Terraform to create a support AWS EC2 instnace in your VPC
 
