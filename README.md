@@ -17,5 +17,5 @@ A bit of Terraform to create a support AWS EC2 instance in your VPC with a **pub
 * If you *really* want ssh access from anywhere, you could tell it your address is 0.0.0.0 - but, the network prefix is purposely hardcoded to /32.  You'd need to change that too.
 
 ## Terraform Version Support
-This was built and tested with Terraform 1.0.11 as that was the version I supported at the time.  I know of no reason you couldn't use a more modern version.
+This was built and tested with Terraform 1.0.11 - as that was the version I supported at the time and Terraform 1.2.4 - as that was the latest stable version..
 
