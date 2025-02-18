@@ -3,7 +3,7 @@
 
 provider "registry.opentofu.org/hashicorp/aws" {
   version     = "5.87.0"
-  constraints = ">= 4.66.0"
+  constraints = ">= 4.66.0, >= 5.83.0"
   hashes = [
     "h1:EDxEPPJt3z1s7LPaTfW4skOwStwIKUa4pRvY1U7fb9U=",
     "zh:0ff0c91bcb9432ea0ae34f0f05e2bcb27d13e416b055b27dd1839277e7828dab",
