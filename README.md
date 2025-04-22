@@ -16,7 +16,7 @@ It's an Amazon 2023 instance with the following tools installed:
 ## Instructions
 
 1. It's assumed you're a Terraform or Tofu user already, so how you connect to AWS is your problem.
-2. This saves state locally.  There's no need for anything else as it's not assumed you're collaborating on it with anyone else, and you just want a *temporary* EC2 instance to use as a jump box.
+2. This saves state locally.  There's no need for anything else as it's not assumed you're collaborating on it with anyone else, and you just want a *temporary* EC2 instance to use as a jump box / bastion.
 3. Edit the locals.tf file.  Change 'name' to whatever you want your resources called, your_ip to your IP address, the VPC and a *public* subnet_id to one in your existing VPC, and add anything you want installed into the user_data.  You should also tweak the tags unless your name is the same as mine.
 
 ## Customisation
