@@ -95,7 +95,7 @@ module "ec2" {
 module "vpc_endpoints" {
   #checkov:skip=CKV_TF_1:Stupid Check
   source  = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
-  version = "~> 5.19.0"
+  version = "~> 5.21.0"
 
   vpc_id = data.aws_vpc.selected.id
 
