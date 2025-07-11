@@ -48,7 +48,7 @@ resource "local_file" "ssh_key" {
 module "ec2" {
   #checkov:skip=CKV_TF_1:Stupid Check
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "~> 5.8.0"
+  version = "~> 6.0.2"
 
   name = local.name
 
@@ -78,12 +78,10 @@ module "ec2" {
   }
 
   enable_volume_tags = true
-  root_block_device = [
-    {
-      encrypted   = true
-      volume_type = "gp3"
-    },
-  ]
+  root_block_device = {
+    encrypted   = true
+    volume_type = "gp3"
+  }
 
   tags = {
     Terraform   = "true"
@@ -95,7 +93,7 @@ module "ec2" {
 module "vpc_endpoints" {
   #checkov:skip=CKV_TF_1:Stupid Check
   source  = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
-  version = "~> 5.21.0"
+  version = "~> 6.0.1"
 
   vpc_id = data.aws_vpc.selected.id
 
