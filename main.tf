@@ -48,7 +48,7 @@ resource "local_file" "ssh_key" {
 module "ec2" {
   #checkov:skip=CKV_TF_1:Stupid Check
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "~> 6.1.0"
+  version = "~> 6.4.0"
 
   name = local.name
 
